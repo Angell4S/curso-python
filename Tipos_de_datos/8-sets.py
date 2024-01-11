@@ -21,3 +21,12 @@ pertenece = 10 in mi_set
 print(pertenece)
 
 frutas = {'manzana', 'Banana', 'pera', 'uva'}
+
+
+# Frozen sets -> son inmutables no se pueden modificar
+
+frutas = {'manzana', 'Banana', 'pera', 'uva'}
+
+mi_frozen_set = frozenset(frutas)
+#mi_frozen_set.add('melon') # no se puede agregar elementos
+print(mi_frozen_set)
