@@ -1,1 +1,1 @@
-# curso-python
+# curso-python pildoras de programación
