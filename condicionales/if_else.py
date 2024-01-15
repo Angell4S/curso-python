@@ -22,13 +22,28 @@
 
 # if anidados
 # casteo de datos -> convertir un tipo de dato a otro
-edad = int(input("Ingrese su edad: "))
-altura = int(input("Ingrese tu altura: "))
+# edad = int(input("Ingrese su edad: "))
+# altura = int(input("Ingrese tu altura: "))
 
-if edad >= 18:
-   if (altura >= 170) or (edad >= 25 and altura >= 165):
-      print("Puedes participar en el equipo de baloncesto")
-   else:
-      print("No cumples con los requisitos para el equipo de baloncesto")
-else:
-   print("Debes ser mayor de edad para participar en el equipo de baloncesto")
+# if edad >= 18:
+#    if (altura >= 170) or (edad >= 25 and altura >= 165):
+#       print("Puedes participar en el equipo de baloncesto")
+#    else:
+#       print("No cumples con los requisitos para el equipo de baloncesto")
+# else:
+#    print("Debes ser mayor de edad para participar en el equipo de baloncesto")
+
+# Operador Ternario -> es una forma de simplificar el if else en una sola linea
+edad = int(input("Ingrese su edad: "))
+mensaje = ""
+
+# Sin operador ternario
+# if edad >= 18:
+#    mensaje = "Usted es mayor de edad"
+# else:
+#    mensaje = "Usted es menor de edad"
+   
+# Con operador ternario
+mensaje = "usted es mayor de edad" if edad >= 18 else "Usted es menor de edad"   
+
+print(mensaje)
