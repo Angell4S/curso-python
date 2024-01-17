@@ -8,8 +8,8 @@ tortuga.speed(1)
 #Dibujar un cuadrado
 
 for _ in range(4):
-   tortuga.forward(100)
-   tortuga.right(90)
+   tortuga.forward(100) # avanzar 100 pasos hacia adelante
+   tortuga.right(90) # giro hacia la derecha 90 grados, para dibujar un cuadrado
 
 
 ventana.exitonclick()
