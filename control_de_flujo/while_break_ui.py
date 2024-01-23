@@ -34,11 +34,14 @@ while True:
    avance_caracol_1 = random.randint(1, 20)
    avance_caracol_2 = random.randint(1, 20)
    
+   if avance_caracol_1 % 2 == 0 or avance_caracol_2 % 2 == 0: 
+      continue
+   
    caracol1.forward(avance_caracol_1)
    caracol2.forward(avance_caracol_2)
    
-   print(f"El caracol 1 avanza {avance_caracol_1} para un total de: {caracol1.xcor()}")
-   print(f"El caracol 2 avanza {avance_caracol_2} para un total de: {caracol2.xcor()}")
+   print(f"El caracol 1 avanza {avance_caracol_1}")
+   print(f"El caracol 2 avanza {avance_caracol_2}")
    print(f"------------------------------")
    
    if caracol1.xcor() >= meta or caracol2.xcor() >= meta:
