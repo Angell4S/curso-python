@@ -21,6 +21,15 @@ caracol2.goto(-300, 0)
 
 meta = 300
 
+# Dibujar linea de meta
+meta_linea = turtle.Turtle()
+meta_linea.penup()
+meta_linea.goto(meta, 150)
+meta_linea.pendown()
+meta_linea.goto(meta, -150)
+meta_linea.hideturtle()
+
+#Carrera
 while True:
    avance_caracol_1 = random.randint(1, 20)
    avance_caracol_2 = random.randint(1, 20)
