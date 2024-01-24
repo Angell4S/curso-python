@@ -11,3 +11,8 @@ def imprimir_nombre(primer_nombre,
 
 # positional arguments
 imprimir_nombre("Angel", "Julian", "Asencios", "Mory")
+
+# Keyword arguments -> son los argumentos que se pasan con el nombre de la variable y su valor pero el orden no importa ya que se ordenara de acuerdo a la función
+imprimir_nombre(segundo_apellido="Mory", primer_nombre="Angel", primer_apellido="Asencios", segundo_nombre="Julian")
+
+imprimir_nombre("Angel", "Julian", segundo_apellido="Mory", primer_apellido="Asencios")
