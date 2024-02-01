@@ -11,16 +11,39 @@ class Pikachu:
       self.__amperaje_max = amperaje_max
       self.color = color
 
+# Manera convencional de declarar getters y setters
+# Getters y Setters son métodos que permiten obtener y modificar los atributos de una clase desde fuera de la misma clase
+   # def get_salud(self):
+   #    return self.__salud
+   
+   # def set_salud(self, salud):
+   #    if salud > 0 and salud < 5000:
+   #       self.__salud = salud
+   #    else:
+   #       print("La salud no puede ser negativa.",
+   #             "La salud no puede ser mayor a 5000.")
+
+# Manera de declarar getters y setters con decoradores (property)
+   @property
+   def salud(self):
+      return self.__salud
+   
+   @salud.setter
+   def salud(self, salud):
+      if salud > 0 and salud < 5000:
+         self.__salud = salud
+      else:
+         print("La salud no puede ser negativa.",
+               "La salud no puede ser mayor a 5000.")
+
    def atacar(self):
       print(f"¡Pikachu ataca y genera {self.__nivel/4} de daño!")
 
 
 
 
-pikachu_1 = Pikachu("Pepe", 750, 500, 6, 2, "amarillo")
-print(f"El pikachu llamado {pikachu_1.nombre} tiene un nivel {pikachu_1.nivel} y es de tipo {pikachu_1.tipo}.")
+pikachu_1 = Pikachu("Pepe", 750, 100, 6, 2, "amarillo")
 
-pikachu_1.__nivel = -900
-pikachu_1.__tipo = "Agua" 
+pikachu_1.salud = 500
 
-print(f"El pikachu llamado {pikachu_1.nombre} tiene un nivel {pikachu_1.nivel} y es de tipo {pikachu_1.tipo}, su voltaje maximo es {pikachu_1.__voltaje_maximo}.")
+print(f"El pikachu llamado {pikachu_1.nombre} tiene una salud de {pikachu_1.salud}.")
