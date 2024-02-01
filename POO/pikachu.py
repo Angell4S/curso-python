@@ -36,14 +36,48 @@ class Pikachu:
          print("La salud no puede ser negativa.",
                "La salud no puede ser mayor a 5000.")
 
+   @property
+   def nivel(self):
+      return self.__nivel
+   
+   @nivel.setter
+   def nivel(self, nivel):
+      if nivel > 0 and nivel < 100:
+         self.__nivel = nivel
+      else:
+         print("El nivel no puede ser negativo.",
+               "El nivel no puede ser mayor a 100.")
+   
+   @property
+   def voltaje_maximo(self):
+      return self.__voltaje_maximo
+
+   @voltaje_maximo.setter
+   def voltaje_maximo(self, voltaje_maximo):
+      self.__voltaje_maximo = voltaje_maximo
+   
+   @property
+   def amperaje_max(self):
+      return self.__amperaje_max
+   
+   @amperaje_max.setter
+   def amperaje_max(self, amperaje_max):
+      self.__amperaje_max = amperaje_max
+
+
    def atacar(self):
       print(f"¡Pikachu ataca y genera {self.__nivel/4} de daño!")
 
 
 
 
-pikachu_1 = Pikachu("Pepe", 750, 100, 6, 2, "amarillo")
+pikachu_1 = Pikachu("Pepe", 70, 100, 6, 2, "amarillo")
 
+pikachu_1.nivel = 90
 pikachu_1.salud = 500
+pikachu_1.voltaje_maximo = 50
+pikachu_1.amperaje_max = 10
 
-print(f"El pikachu llamado {pikachu_1.nombre} tiene una salud de {pikachu_1.salud}.")
+
+print(f"El pikachu llamado {pikachu_1.nombre} tiene una salud de {pikachu_1.salud}",
+      f"un nivel de {pikachu_1.nivel}, un voltaje de {pikachu_1.voltaje_maximo}, y un amperaje de {pikachu_1.amperaje_max}.")
