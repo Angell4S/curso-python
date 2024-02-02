@@ -1,15 +1,14 @@
-class Pikachu:
+from pokemon import Pokemon
+
+class Pikachu(Pokemon):
    
 # _ significa que es privado, pero se puede acceder y modificar, __ significa que es privado y no se puede acceder ni modificar
    __tipo = "Eléctrico"
 
    def __init__(self, nombre, nivel, salud, voltaje_maximo, amperaje_max, color):
-      self.nombre = nombre
-      self.__nivel = nivel
-      self.__salud = salud
+      super().__init__(nombre, nivel, salud, color) # super -> llama al constructor de la clase padre (Pokemon)
       self.__voltaje_maximo = voltaje_maximo
       self.__amperaje_max = amperaje_max
-      self.color = color
 
 # Manera convencional de declarar getters y setters
 # Getters y Setters son métodos que permiten obtener y modificar los atributos de una clase desde fuera de la misma clase
