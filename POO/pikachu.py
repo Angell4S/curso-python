@@ -6,7 +6,7 @@ class Pikachu(Pokemon):
    __tipo = "Eléctrico"
 
    def __init__(self, nombre, nivel, salud, voltaje_maximo, amperaje_max, color):
-      super().__init__(nombre, nivel, salud, color) # super -> llama al constructor de la clase padre (Pokemon)
+      super().__init__(nombre=nombre, nivel=nivel, salud=salud, color=color) # super -> llama al constructor de la clase padre (Pokemon)
       self.__voltaje_maximo = voltaje_maximo
       self.__amperaje_max = amperaje_max
 
@@ -25,47 +25,47 @@ class Pikachu(Pokemon):
 # Manera de declarar getters y setters con decoradores (property)
    @property
    def salud(self):
-      return self.__salud
+      return self._Pokemon__salud
    
    @salud.setter
    def salud(self, salud):
       if salud > 0 and salud < 5000:
-         self.__salud = salud
+         self._Pokemon__salud = salud
       else:
          print("La salud no puede ser negativa.",
                "La salud no puede ser mayor a 5000.")
 
    @property
    def nivel(self):
-      return self.__nivel
+      return self._Pokemon__nivel
    
    @nivel.setter
    def nivel(self, nivel):
       if nivel > 0 and nivel < 100:
-         self.__nivel = nivel
+         self._Pokemon__nivel = nivel
       else:
          print("El nivel no puede ser negativo.",
                "El nivel no puede ser mayor a 100.")
    
    @property
    def voltaje_maximo(self):
-      return self.__voltaje_maximo
+      return self._Pokemon__voltaje_maximo
 
    @voltaje_maximo.setter
    def voltaje_maximo(self, voltaje_maximo):
-      self.__voltaje_maximo = voltaje_maximo
+      self._Pokemon__voltaje_maximo = voltaje_maximo
    
    @property
    def amperaje_max(self):
-      return self.__amperaje_max
+      return self._Pokemon__amperaje_max
    
    @amperaje_max.setter
    def amperaje_max(self, amperaje_max):
-      self.__amperaje_max = amperaje_max
+      self._Pokemon__amperaje_max = amperaje_max
 
 
    def atacar(self):
-      print(f"¡Pikachu ataca y genera {self.__nivel/4} de daño!")
+      print(f"¡Pikachu ataca y genera {self._Pokemon__nivel/4} de daño!")
 
 
 
