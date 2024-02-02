@@ -22,30 +22,7 @@ class Pikachu(Pokemon):
    #       print("La salud no puede ser negativa.",
    #             "La salud no puede ser mayor a 5000.")
 
-# Manera de declarar getters y setters con decoradores (property)
-   @property
-   def salud(self):
-      return self._Pokemon__salud
-   
-   @salud.setter
-   def salud(self, salud):
-      if salud > 0 and salud < 5000:
-         self._Pokemon__salud = salud
-      else:
-         print("La salud no puede ser negativa.",
-               "La salud no puede ser mayor a 5000.")
 
-   @property
-   def nivel(self):
-      return self._Pokemon__nivel
-   
-   @nivel.setter
-   def nivel(self, nivel):
-      if nivel > 0 and nivel < 100:
-         self._Pokemon__nivel = nivel
-      else:
-         print("El nivel no puede ser negativo.",
-               "El nivel no puede ser mayor a 100.")
    
    @property
    def voltaje_maximo(self):
