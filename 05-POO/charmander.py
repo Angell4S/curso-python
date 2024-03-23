@@ -5,6 +5,7 @@ class Charmander(Pokemon):
       super().__init__(nombre, nivel, salud, color)
    
 
-charmander_1 = Charmander("chori",50,80,"rojo")
+charmander_1 = Charmander("chori",99,99,"rojo")
+
 
 print(f"El charmander llamado {charmander_1.nombre} tiene una salud de {charmander_1.salud}")

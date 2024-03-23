@@ -1,13 +1,13 @@
 class Pokemon:
 
     def __init__(self, nombre, nivel, salud, color):
-      self.nombre = nombre  # Atributo público
-      self.__nivel = None  # Atributo privado
-      self.__salud = None  # Atributo privado
-      self.color = color  # Atributo privado
+        self.nombre = nombre  # Atributo público
+        self.__nivel = None  # Atributo privado
+        self.__salud = None  # Atributo privado
+        self.color = color  # Atributo privado
 
-      self.salud = salud
-      self.nivel = nivel
+        self.salud = salud
+        self.nivel = nivel
 
     # Manera de declarar getters y setters con decoradores (property)
     @property
