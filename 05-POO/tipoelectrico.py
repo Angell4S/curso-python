@@ -35,3 +35,6 @@ class TipoElectrico(Pokemon):
          self.__amperaje_maximo = amperaje_maximo
       else:
          print("El amperaje no puede ser negativo.")
+
+   def atacar(self):
+      print(f"¡Pikachu ataca con electricidad y genera {(self.voltaje_maximo + self.amperaje_maximo)/4} de daño!")
