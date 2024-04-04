@@ -1,3 +1,7 @@
+# Abstracción - En este caso estamos aplicando abstracción
+# ya que estamos creando una clase Pokemon con atributos y métodos
+# que nos permiten crear objetos de tipo Pokemon.
+
 class Pokemon:
 
     def __init__(self, nombre, nivel, salud, color):
