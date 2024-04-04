@@ -2,7 +2,10 @@
 # ya que estamos creando una clase Pokemon con atributos y métodos
 # que nos permiten crear objetos de tipo Pokemon.
 
-class Pokemon:
+#importando clases abstractas
+from abc import ABC, abstractmethod
+
+class Pokemon(ABC):
 
     def __init__(self, nombre, nivel, salud, color):
         self.nombre = nombre  # Atributo público
@@ -39,3 +42,7 @@ class Pokemon:
             print(
                 "El nivel no puede ser negativo.", "El nivel no puede ser mayor a 100."
             )
+
+    @abstractmethod
+    def atacar(self):
+        pass

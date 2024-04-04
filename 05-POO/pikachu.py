@@ -27,13 +27,12 @@ class Pikachu(TipoElectrico):
    def atacar_cola_hierro(self):
       print(f"Pikachu ataca y genera {self.longitud_cola/0.5}")
 
+print(__name__)
+if __name__ == "__main__":
+   pikachu_1 = Pikachu("Pepe", 90, 98, 120, 2, "amarillo", 1)
+
+   pikachu_1.salud = 50
 
 
-
-pikachu_1 = Pikachu("Pepe", 90, 98, 120, 2, "amarillo", 1)
-
-pikachu_1.salud = 50
-
-
-pikachu_1.atacar()
-pikachu_1.atacar_cola_hierro()
+   pikachu_1.atacar()
+   pikachu_1.atacar_cola_hierro()

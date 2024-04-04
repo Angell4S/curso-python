@@ -19,3 +19,6 @@ class TipoFuego(Pokemon):
          self.__temperatura_max = temperatura_max
       else:
          print("La temperatura no puede ser negativa.")
+   
+   def atacar(self):
+      print(f'Ataque con fuego y genera {self.temperatura_max * 0.5} de daño')
