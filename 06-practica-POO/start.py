@@ -1,8 +1,8 @@
 import pygame
+from celestial_object import CelestialObject
 
-class Star:
+class Star(CelestialObject):
    
    def __init__(self, image_path, mass, nucleo_status):
-      self.image_path = image_path
-      self.mass = mass
+      super().__init__(image_path=image_path, mass=mass)
       self.nucleo_status = nucleo_status

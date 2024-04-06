@@ -1,8 +1,6 @@
+from celestial_object import CelestialObject
 
-class Asteroid:
+class Asteroid(CelestialObject):
 
    def __init__(self, image_path, distance, orbit_speed, mass):
-      self.image_path = image_path
-      self.distance = distance
-      self.orbit_speed = orbit_speed
-      self.mass = mass
+      super().__init__(image_path=image_path, distance=distance, orbit_speed=orbit_speed, mass=mass)
