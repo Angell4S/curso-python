@@ -11,12 +11,12 @@ FPS = 60
 screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
 pygame.display.set_caption('Sistema Solar')
 
-sun = Star(image_path='C:\\Users\\user\\Desktop\\curso-python\\06-practica-POO\\images\\sol.png', mass=2000, nucleo_status='Active')
-mercury = Planet(image_path='C:\\Users\\user\\Desktop\\curso-python\\06-practica-POO\\images\\mercurio.png', distance=100, orbit_speed=2, mass=50, nucleo_status='Inactive')
-mars = Planet(image_path='C:\\Users\\user\\Desktop\\curso-python\\06-practica-POO\\images\\marte.png', distance=180, orbit_speed=2, mass=250, nucleo_status='Active')
-asteroid = Asteroid(image_path='C:\\Users\\user\\Desktop\\curso-python\\06-practica-POO\\images\\asteroide.png', distance=210, orbit_speed=1, mass=20)
+sun = Star(image_path='C:\\Users\\angel\\OneDrive\\Escritorio\\GITHUB\\Repositorio Angel\\curso-python\\06-practica-POO\\images\\sol.png', mass=2000, nucleo_status='Active')
+mercury = Planet(image_path='C:\\Users\\angel\\OneDrive\\Escritorio\\GITHUB\\Repositorio Angel\\curso-python\\06-practica-POO\\images\\mercurio.png', distance=100, orbit_speed=2, mass=50, nucleo_status='Inactive')
+mars = Planet(image_path='C:\\Users\\angel\\OneDrive\\Escritorio\\GITHUB\\Repositorio Angel\\curso-python\\06-practica-POO\\images\marte.png', distance=180, orbit_speed=2, mass=250, nucleo_status='Active')
+asteroid = Asteroid(image_path='C:\\Users\\angel\\OneDrive\\Escritorio\\GITHUB\\Repositorio Angel\\curso-python\\06-practica-POO\\images\\asteroide.png', distance=210, orbit_speed=2, mass=20)
 
-background_image = pygame.image.load('C:\\Users\\user\\Desktop\\curso-python\\06-practica-POO\\images\\fondo.png').convert()
+background_image = pygame.image.load('C:\\Users\\angel\\OneDrive\\Escritorio\\GITHUB\\Repositorio Angel\\curso-python\\06-practica-POO\\images\\fondo.png').convert()
 background_rect = background_image.get_rect()
 
 clock = pygame.time.Clock()
@@ -32,6 +32,15 @@ while running:
    mercury.draw(screen)
    mars.draw(screen)
    asteroid.draw(screen)
+   
+   mercury.generate_magnetic_field(screen)
+   mars.generate_magnetic_field(screen)
+   sun.generate_magnetic_field(screen)
+
+   sun.update()
+   mercury.update()
+   mars.update()
+   asteroid.update()
 
    pygame.display.flip()
    clock.tick(FPS)

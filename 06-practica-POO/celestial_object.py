@@ -1,14 +1,32 @@
 import pygame
 import math
+from abc import ABC, abstractmethod
 
-class CelestialObject:
+class CelestialObject(ABC):
    def __init__(self, image_path, mass, distance=0, orbit_speed=0):
+      self.image_path = image_path
       self.image = pygame.image.load(image_path)
       self.rect = self.image.get_rect()
       self.angle = 0
       self.distance = distance
-      self.orbit_speed = orbit_speed
+      self._orbit_speed = 0
       self.mass = mass
+      
+      self.orbit_speed = orbit_speed
+      
+   @property
+   def orbit_speed(self):
+      return self._orbit_speed
+   
+   @orbit_speed.setter
+   def orbit_speed(self, value):
+      if value >= 0 and value <= 10:
+         self._orbit_speed = value
+      else:
+         raise ValueError("Orbit Value Error")
+      
+   def update(self):
+         self.angle += self.orbit_speed
    
    def draw(self, screen):
       x = (screen.get_width() // 2) + (self.distance * math.cos(math.radians(self.angle)))
@@ -16,3 +34,7 @@ class CelestialObject:
       self.rect.centerx = x
       self.rect.centery = y
       screen.blit(self.image, self.rect)
+   
+   @abstractmethod
+   def generate_magnetic_field(self, screen):
+      pass
